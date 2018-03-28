@@ -21,7 +21,7 @@ This plugin uses Chatkit for UI components so you need to add **android.library.
     target=android-26
     android.library.reference.1=CordovaLib
     android.library.reference.2=app
-    android.library.reference.3=chatkit
+    android.library.reference.3=chatkit // This the line that needs to be added
     cordova.gradle.include.1=com.chatcamp.plugin/chatcampapp-chatcamp.gradle
 ```
 ### Steps to integrate:
