@@ -1,15 +1,16 @@
 # ChatCamp-Cordova-Plugin
 ChatCamp Cordova Plugin
 
-Chatcamp powers real time messaging across any device, any platform & anywhere in the world. Integrate our simple SDK to engage your users with image, file and video sharing.
+Realtime Chat SDK and Messaging API for Apps & Websites
+Integrate in-app messaging in your mobile apps & websites using ChatCamp platform
 
 Signup at https://dashboard.chatcamp.io/register to get the application key.
 
 ## Note
 
-This plugin is a wrapper around native code, so please make sure you test it on an emulator or a real device.
+This plugin is a wrapper around native code.
 
-##Install the plugin
+## Install the plugin
 
 ```$ cordova plugin add https://github.com/ChatCamp/ChatCamp-Cordova-Plugin.git```
     
