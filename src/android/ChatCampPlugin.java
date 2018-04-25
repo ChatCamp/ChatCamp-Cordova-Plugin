@@ -40,7 +40,7 @@ public class ChatCampPlugin extends CordovaPlugin {
         return false;
     }
 
-    private void initChatcamp(CallbackContext callbackContext, JSONArray args) {
+    private void initChatcamp(final CallbackContext callbackContext, JSONArray args) {
 
         try {
             JSONObject input = args.getJSONObject(0);
@@ -71,9 +71,9 @@ public class ChatCampPlugin extends CordovaPlugin {
         }
     }
 
-    private void createGroup(CallbackContext callbackContext, JSONArray args) {
+    private void createGroup(final CallbackContext callbackContext, JSONArray args) {
         try {
-            Context context = cordova.getActivity().getApplicationContext();
+            final Context context = cordova.getActivity().getApplicationContext();
             JSONObject input = args.getJSONObject(0);
             String userIds = input.get("userIds").toString();
             String channelName = input.get("channelName").toString();

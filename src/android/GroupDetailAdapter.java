@@ -51,7 +51,7 @@ public class GroupDetailAdapter extends RecyclerView.Adapter {
     private OnParticipantClickedListener participantClickedListener;
 
     public GroupDetailAdapter(Context context) {
-        participants = new ArrayList<>();
+        participants = new ArrayList<ParticipantView>();
         participants.add(0, new ParticipantView(null));
         participants.add(new ParticipantView(null));
         participants.add(new ParticipantView(null));

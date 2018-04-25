@@ -13,5 +13,6 @@
     "cordova-android"
   ],
   "author": "Shubham Dhabhai",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {}
 }

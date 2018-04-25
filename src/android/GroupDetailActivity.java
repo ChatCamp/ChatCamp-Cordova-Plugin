@@ -77,7 +77,7 @@ public class GroupDetailActivity extends AppCompatActivity implements GroupDetai
           .placeholder(resources.getIdentifier("icon_default_contact", "drawable", package_name))
                 .error(resources.getIdentifier("icon_default_contact", "drawable", package_name))
                 .into(toolbarIv);
-        List<ParticipantView> participantList = new ArrayList<>();
+        List<ParticipantView> participantList = new ArrayList<ParticipantView>();
         for(Participant participant : groupChannel.getParticipants()) {
             participantList.add(new ParticipantView(participant));
         }

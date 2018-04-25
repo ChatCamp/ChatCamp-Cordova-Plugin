@@ -169,7 +169,7 @@ public class ConversationActivity extends AppCompatActivity {
         });
         userId = getIntent().getStringExtra("userId");
 
-        messageMessagesListAdapter = new MessagesListAdapter<>(userId, holder, imageLoader);
+        messageMessagesListAdapter = new MessagesListAdapter<ConversationMessage>(userId, holder, imageLoader);
         mMessagesList.setAdapter(messageMessagesListAdapter);
 
         // use a linear layout manager
@@ -535,7 +535,7 @@ public class ConversationActivity extends AppCompatActivity {
             public void onGroupChannelTypingStatusChanged(GroupChannel channel) {
                 if (channel.isTyping()) {
                     List<Participant> participants = channel.getTypingParticipants();
-                    List<Participant> otherPaticipants = new ArrayList<>(participants);
+                    List<Participant> otherPaticipants = new ArrayList<Participant>(participants);
                     Iterator<Participant> participantIterator = otherPaticipants.iterator();
                     while (participantIterator.hasNext()) {
                         Participant participant = participantIterator.next();
@@ -544,7 +544,7 @@ public class ConversationActivity extends AppCompatActivity {
                             break;
                         }
                     }
-                    List<ConversationMessage> toBeRemovedMessage = new ArrayList<>();
+                    List<ConversationMessage> toBeRemovedMessage = new ArrayList<ConversationMessage>();
                     List<ConversationMessage> conversationMessages = messageMessagesListAdapter.getMessageList();
                     if (conversationMessages != null
                             && conversationMessages.size() > 0) {
