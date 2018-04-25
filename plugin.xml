@@ -33,7 +33,6 @@
             </provider>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
-        <edit-config file="app/src/main/AndroidManifest.xml" target="/manifest/application" mode="merge">
         <source-file src="src/android/ChatCampPlugin.java"
             target-dir="src/com/chatcamp/plugin/ChatCampPlugin" />
         <source-file src="src/android/ConversationActivity.java" target-dir="src/com/chatcamp/plugin/ChatCampPlugin" />
