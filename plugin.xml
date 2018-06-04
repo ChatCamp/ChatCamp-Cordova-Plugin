@@ -13,77 +13,32 @@
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
             <activity android:label="Conversation" android:name="com.chatcamp.plugin.ConversationActivity"
                 android:theme="@style/AppTheme.NoActionBar"></activity>
-            <activity android:label="UserProfile" android:name="com.chatcamp.plugin.UserProfileActivity"
-                android:theme="@style/AppTheme.NoActionBar"></activity>
-            <activity android:label="GroupDetail" android:name="com.chatcamp.plugin.GroupDetailActivity"
-                android:theme="@style/AppTheme.NoActionBar"></activity>
-            <activity android:label="MediaPreview" android:name="com.chatcamp.plugin.MediaPreviewActivity"
-                android:theme="@style/AppTheme.NoActionBar"></activity>
-            <activity android:label="WebView" android:name="com.chatcamp.plugin.WebViewActivity"
-                android:theme="@style/AppTheme.NoActionBar"></activity>
-
-            <provider
-                android:name="android.support.v4.content.FileProvider"
-                android:authorities="${applicationId}.fileprovider"
-                android:exported="false"
-                android:grantUriPermissions="true">
-                <meta-data
-                    android:name="android.support.FILE_PROVIDER_PATHS"
-                    android:resource="@xml/file_paths"></meta-data>
-            </provider>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
         <source-file src="src/android/ChatCampPlugin.java"
             target-dir="src/com/chatcamp/plugin/ChatCampPlugin" />
         <source-file src="src/android/ConversationActivity.java" target-dir="src/com/chatcamp/plugin/ChatCampPlugin" />
         <source-file src="src/android/activity_conversation.xml" target-dir="res/layout"/>
-        <source-file src="src/android/layout_attachment.xml" target-dir="res/layout"/>
-
-        <source-file src="src/android/UserProfileActivity.java" target-dir="src/com/chatcamp/plugin/ChatCampPlugin" />
-        <source-file src="src/android/activity_user_profile.xml" target-dir="res/layout"/>
-
-        <source-file src="src/android/GroupDetailActivity.java" target-dir="src/com/chatcamp/plugin/ChatCampPlugin" />
-        <source-file src="src/android/activity_group_detail.xml" target-dir="res/layout"/>
-
-        <source-file src="src/android/GroupDetailAdapter.java" target-dir="src/com/chatcamp/plugin/ChatCampPlugin" />
-        <source-file src="src/android/layout_add_participant.xml" target-dir="res/layout"/>
-        <source-file src="src/android/layout_participant_view.xml" target-dir="res/layout"/>
-        <source-file src="src/android/layout_participant_count.xml" target-dir="res/layout"/>
-        <source-file src="src/android/layout_exit_participant.xml" target-dir="res/layout"/>
-
-        <source-file src="src/android/MediaPreviewActivity.java" target-dir="src/com/chatcamp/plugin/ChatCampPlugin" />
-        <source-file src="src/android/image_preview_layout.xml" target-dir="res/layout"/>
-
-        <source-file src="src/android/WebViewActivity.java" target-dir="src/com/chatcamp/plugin/ChatCampPlugin" />
-        <source-file src="src/android/activity_web_view.xml" target-dir="res/layout"/>
-
-        <source-file src="src/android/ActionMessage.java" target-dir="src/com/chatcamp/plugin/ChatCampPlugin" />
-        <source-file src="src/android/ParticipantView.java" target-dir="src/com/chatcamp/plugin/ChatCampPlugin" />
-        <source-file src="src/android/ConversationMessage.java" target-dir="src/com/chatcamp/plugin/ChatCampPlugin" />
-        <source-file src="src/android/ConversationAuthor.java" target-dir="src/com/chatcamp/plugin/ChatCampPlugin" />
-        <source-file src="src/android/FilePath.java" target-dir="src/com/chatcamp/plugin/ChatCampPlugin" />
 
         <source-file src="src/android/styles.xml" target-dir="res/values"/>
         <source-file src="src/android/colors.xml" target-dir="res/values"/>
         <source-file src="src/android/dimens.xml" target-dir="res/values"/>
-        <source-file src="src/android/file_paths.xml" target-dir="res/xml"/>
-        <source-file src="src/android/menu_group_detail.xml" target-dir="res/menu"/>
         <!--<source-file src="src/android/drawable-xxhdpi/" target-dir="app/src/main/res/drawable-port-xxhdpi"/>-->
-        <source-file src="src/android/drawable-xxhdpi/ic_online.png" target-dir="app/src/main/res/drawable-port-xxhdpi"/>
         <source-file src="src/android/drawable-xxhdpi/icon_default_contact.jpeg" target-dir="app/src/main/res/drawable-port-xxhdpi"/>
-        <source-file src="src/android/drawable-xxhdpi/exit_group.png" target-dir="app/src/main/res/drawable-port-xxhdpi"/>
         <source-file src="src/android/drawable-xxhdpi/ic_document.png" target-dir="app/src/main/res/drawable-port-xxhdpi"/>
         <source-file src="src/android/drawable-xxhdpi/ic_gallery.png" target-dir="app/src/main/res/drawable-port-xxhdpi"/>
         <source-file src="src/android/drawable-xxhdpi/ic_camera.png" target-dir="app/src/main/res/drawable-port-xxhdpi"/>
-        <source-file src="src/android/drawable-xxhdpi/edit_white.png" target-dir="app/src/main/res/drawable-port-xxhdpi"/>
+        <source-file src="src/android/drawable-xxhdpi/ic_attachment_app.png" target-dir="app/src/main/res/drawable-port-xxhdpi"/>
+        <source-file src="src/android/drawable-xxhdpi/ic_send_app.png" target-dir="app/src/main/res/drawable-port-xxhdpi"/>
+        <source-file src="src/android/drawable-xxhdpi/icon_user.png" target-dir="app/src/main/res/drawable-port-xxhdpi"/>
 
-        <source-file src="src/android/drawable-xxhdpi/ic_online.png" target-dir="res/drawable-port-xxhdpi"/>
         <source-file src="src/android/drawable-xxhdpi/icon_default_contact.jpeg" target-dir="res/drawable-port-xxhdpi"/>
-        <source-file src="src/android/drawable-xxhdpi/exit_group.png" target-dir="res/drawable-port-xxhdpi"/>
         <source-file src="src/android/drawable-xxhdpi/ic_document.png" target-dir="res/drawable-port-xxhdpi"/>
         <source-file src="src/android/drawable-xxhdpi/ic_gallery.png" target-dir="res/drawable-port-xxhdpi"/>
         <source-file src="src/android/drawable-xxhdpi/ic_camera.png" target-dir="res/drawable-port-xxhdpi"/>
-        <source-file src="src/android/drawable-xxhdpi/edit_white.png" target-dir="res/drawable-port-xxhdpi"/>
+        <source-file src="src/android/drawable-xxhdpi/ic_attachment_app.png" target-dir="res/drawable-port-xxhdpi"/>
+        <source-file src="src/android/drawable-xxhdpi/ic_send_app.png" target-dir="res/drawable-port-xxhdpi"/>
+        <source-file src="src/android/drawable-xxhdpi/icon_user.png" target-dir="res/drawable-port-xxhdpi"/>
         <!--<source-file src="src/android/drawable-v24" target-dir="res/"/>-->
         <!--<source-file src="src/android/drawable-xxhdpi" target-dir="res/"/>-->
         <!--<framework src="settings.gradle" custom="true" type="gradleReference" />-->

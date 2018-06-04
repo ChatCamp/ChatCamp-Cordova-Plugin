@@ -16,7 +16,6 @@ import io.chatcamp.sdk.BaseChannel;
 import io.chatcamp.sdk.GroupChannel;
 import io.chatcamp.sdk.User;
 
-import com.stfalcon.chatkit.messages.MessagesList;
 import com.chatcamp.plugin.ConversationActivity;
 import io.chatcamp.sdk.GroupChannelListQuery;
 
@@ -91,7 +90,6 @@ public class ChatCampPlugin extends CordovaPlugin {
                     intent.putExtra("channelType", "group");
                     intent.putExtra("participantState", GroupChannelListQuery.ParticipantState.ALL.name());
                     intent.putExtra("channelId", groupChannel.getId());
-                    intent.putExtra("userId", userId);
                     ChatCampPlugin.this.cordova.getActivity().startActivity(intent);
                   } else {
                     // callbackContext.error(new Gson().toJson(e));
